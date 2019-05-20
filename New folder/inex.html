@@ -3,12 +3,19 @@
 <head>
     <title>My Angular app</title>
     <link href="content/css/style.css" rel="stylesheet" href="style.css">
-    <script src="app\lib\angular.min.js"></script>
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/app.js"></script>
 </head>
-<body ng-init="games = ['pubg', 'cs:go', 'fifa', 'mini-militia']">
-    <input type="text" ng-model="favGame" placeholder="enter your fav game">
-    <ul>
-        <li ng-repeat = "game in games">{{game}}</li>
-    </ul>
+<body>
+
+    <div ng-controller="GameController">
+        <input type="text" ng-model="search">
+        <ul>
+            <li ng-repeat="game in games | orderBy: 'name' | filter: search">
+                {{game.name}} - {{game.rate | currency: '^'}}
+            </li>
+        </ul>
+    </div>
+    
 </body>
 </html>
