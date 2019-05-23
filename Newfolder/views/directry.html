@@ -1,0 +1,20 @@
+<div class="content">
+        
+            <button ng-click="order='name'">Order By name</button>
+            <button ng-click="order='game'">Order By game</button>
+            <input type="text" ng-model="search">
+            <ul>
+                <li ng-repeat="game in games | orderBy: order | filter: search" ng-show="game.available">
+                    <h3>{{game.name}} - {{game.rate | currency}}</h3>
+                    <div class="remove" ng-click="removeGame(game)">x</div>
+                    <span>{{game.game}}</span>
+                </li>
+            </ul>
+            <form ng-submit="addGammer()">
+                <input type="text" placeholder="name" ng-model="newgammer.name"/>
+                <input type="text" placeholder="game" ng-model="newgammer.game"/>
+                <input type="text" placeholder="rate" ng-model="newgammer.rate"/>
+                <input type="submit" value="Add new gammer" />
+            </form>
+        
+    </div>
