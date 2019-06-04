@@ -8,7 +8,7 @@ import { delay } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DishService {
-
+  
   constructor() { }
 
   getDishes(): Observable<Dish[]> {
