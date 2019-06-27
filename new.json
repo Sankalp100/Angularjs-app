@@ -1,0 +1,385 @@
+{
+    "passwordGenerationMethod": "System",
+    "isActive": true,
+    "roles": [
+        {
+            "_id": "57e54be3372ec744557b4a90",
+            "title": "Admin"
+        }
+    ],
+    "applicableSites": [
+        [
+            {
+                "_id": "5c98acc3133d0432d9ec4a7b",
+                "title": "Region 1"
+            },
+            {
+                "_id": "5c98accd133d0432d9ec4a82",
+                "title": "Region 2"
+            },
+            {
+                "_id": "5c98acd5133d0432d9ec4a89",
+                "title": "Region 3"
+            },
+            {
+                "_id": "5c98acdb133d0432d9ec4a90",
+                "title": "Region 4"
+            },
+            {
+                "_id": "5c98ace3133d0432d9ec4a97",
+                "title": "Region 5"
+            },
+            {
+                "_id": "5ce55d9bcd5aa24b22278cfc",
+                "title": "Region 6"
+            }
+        ],
+        [
+            {
+                "_id": "5c98acfe133d0432d9ec4a9e",
+                "title": "Billings"
+            },
+            {
+                "_id": "5c98adb9133d0432d9ec4ab4",
+                "title": "Fargo"
+            },
+            {
+                "_id": "5c98adcf133d0432d9ec4ac0",
+                "title": "Spokane"
+            },
+            {
+                "_id": "5c98af84133d0432d9ec4b16",
+                "title": "Albuquerque"
+            },
+            {
+                "_id": "5c98ae51133d0432d9ec4ada",
+                "title": "El Paso"
+            },
+            {
+                "_id": "5c98ae6f133d0432d9ec4ae2",
+                "title": "McAllen"
+            },
+            {
+                "_id": "5c98ae8c133d0432d9ec4aea",
+                "title": "Lubbock"
+            },
+            {
+                "_id": "5c98aeba133d0432d9ec4af2",
+                "title": "Phoenix"
+            },
+            {
+                "_id": "5c98aee0133d0432d9ec4afc",
+                "title": "Las Vegas"
+            },
+            {
+                "_id": "5c98af13133d0432d9ec4b04",
+                "title": "San Francisco"
+            },
+            {
+                "_id": "5c98af65133d0432d9ec4b0e",
+                "title": "San Luis Obispo"
+            },
+            {
+                "_id": "5c98afa2133d0432d9ec4b20",
+                "title": "Denver"
+            },
+            {
+                "_id": "5c98afc6133d0432d9ec4b28",
+                "title": "Rapid City"
+            },
+            {
+                "_id": "5c98ae06133d0432d9ec4ac8",
+                "title": "Memphis"
+            },
+            {
+                "_id": "5c98ae34133d0432d9ec4ad2",
+                "title": "Lafayette"
+            }
+        ],
+        [
+            {
+                "_id": "5c98ad2c133d0432d9ec4aaa",
+                "title": "Billings"
+            },
+            {
+                "_id": "5c98b011133d0432d9ec4b30",
+                "title": "Bismarck"
+            },
+            {
+                "_id": "5c98b02e133d0432d9ec4b3a",
+                "title": "Fargo"
+            },
+            {
+                "_id": "5cf0e01016229f3f899f4de0",
+                "title": "Aberdeen"
+            },
+            {
+                "_id": "5cf0e01d16229f3f899f4def",
+                "title": "Minot"
+            },
+            {
+                "_id": "5c98b046133d0432d9ec4b42",
+                "title": "North Idaho - Coeur d'Alene"
+            },
+            {
+                "_id": "5c98b057133d0432d9ec4b4a",
+                "title": "North Spokane"
+            },
+            {
+                "_id": "5c98b072133d0432d9ec4b52",
+                "title": "Spokane DIV HQ"
+            },
+            {
+                "_id": "5c98b08d133d0432d9ec4b5a",
+                "title": "LC Valley - Lewiston"
+            },
+            {
+                "_id": "5c98b916133d0432d9ec4cba",
+                "title": "Albuquerque"
+            },
+            {
+                "_id": "5c98b1dd133d0432d9ec4bb2",
+                "title": "El Paso East"
+            },
+            {
+                "_id": "5c98b20d133d0432d9ec4bba",
+                "title": "El Paso Main"
+            },
+            {
+                "_id": "5c98b244133d0432d9ec4bc2",
+                "title": "Las Cruces"
+            },
+            {
+                "_id": "5c98b257133d0432d9ec4bca",
+                "title": "Rio Rancho"
+            },
+            {
+                "_id": "5c98b26b133d0432d9ec4bd2",
+                "title": "Santa Fe"
+            },
+            {
+                "_id": "5c98b291133d0432d9ec4bda",
+                "title": "Farmington"
+            },
+            {
+                "_id": "5cf0e00216229f3f899f4dd1",
+                "title": "Roswell"
+            },
+            {
+                "_id": "5c98b39e133d0432d9ec4be2",
+                "title": "Harlingen"
+            },
+            {
+                "_id": "5c98b3bf133d0432d9ec4bea",
+                "title": "McAllen"
+            },
+            {
+                "_id": "5c98b427133d0432d9ec4bf2",
+                "title": "Lubbock"
+            },
+            {
+                "_id": "5c98b449133d0432d9ec4bfa",
+                "title": "Midland"
+            },
+            {
+                "_id": "5c98b52d133d0432d9ec4c02",
+                "title": "San Angelo"
+            },
+            {
+                "_id": "5c98b540133d0432d9ec4c0a",
+                "title": "Black Canyon"
+            },
+            {
+                "_id": "5c98b55f133d0432d9ec4c12",
+                "title": "Chandler"
+            },
+            {
+                "_id": "5c98b5a6133d0432d9ec4c1a",
+                "title": "East Valley - Mesa"
+            },
+            {
+                "_id": "5c98b5b5133d0432d9ec4c22",
+                "title": "Glendale"
+            },
+            {
+                "_id": "5c98b614133d0432d9ec4c2a",
+                "title": "North Scottsdale"
+            },
+            {
+                "_id": "5c98b630133d0432d9ec4c32",
+                "title": "West Valley - Goodyear"
+            },
+            {
+                "_id": "5cf0dfe316229f3f899f4db3",
+                "title": "Scottsdale"
+            },
+            {
+                "_id": "5cf0dff116229f3f899f4dc3",
+                "title": "Northern Arizona"
+            },
+            {
+                "_id": "5c98b668133d0432d9ec4c3a",
+                "title": "Green Valley - Henderson"
+            },
+            {
+                "_id": "5c98b6bc133d0432d9ec4c42",
+                "title": "Las Vegas"
+            },
+            {
+                "_id": "5c98b6d8133d0432d9ec4c4a",
+                "title": "Northwest - Las Vegas"
+            },
+            {
+                "_id": "5c98b701133d0432d9ec4c52",
+                "title": "Carson City"
+            },
+            {
+                "_id": "5c98b718133d0432d9ec4c5a",
+                "title": "Downtown - San Francisco"
+            },
+            {
+                "_id": "5c98b746133d0432d9ec4c62",
+                "title": "Irwin - San Francisco"
+            },
+            {
+                "_id": "5c98b76a133d0432d9ec4c6a",
+                "title": "Napa"
+            },
+            {
+                "_id": "5c98b783133d0432d9ec4c72",
+                "title": "North Bay - Fairfield"
+            },
+            {
+                "_id": "5c98b79e133d0432d9ec4c7a",
+                "title": "Peninsula - San Mateo"
+            },
+            {
+                "_id": "5c98b7ea133d0432d9ec4c82",
+                "title": "Reno"
+            },
+            {
+                "_id": "5c98b82c133d0432d9ec4c92",
+                "title": "Sparks"
+            },
+            {
+                "_id": "5c98b805133d0432d9ec4c8a",
+                "title": "Santa Rosa"
+            },
+            {
+                "_id": "5c98b849133d0432d9ec4c9a",
+                "title": "San Luis Obispo"
+            },
+            {
+                "_id": "5c98b872133d0432d9ec4ca2",
+                "title": "Santa Barbara"
+            },
+            {
+                "_id": "5c98b886133d0432d9ec4caa",
+                "title": "Santa Maria"
+            },
+            {
+                "_id": "5c98b8fd133d0432d9ec4cb2",
+                "title": "Ventura"
+            },
+            {
+                "_id": "5c98b931133d0432d9ec4cc2",
+                "title": "Boulder"
+            },
+            {
+                "_id": "5c98b95e133d0432d9ec4cca",
+                "title": "Casper"
+            },
+            {
+                "_id": "5c98b975133d0432d9ec4cd2",
+                "title": "Cheyenne"
+            },
+            {
+                "_id": "5c98b986133d0432d9ec4cda",
+                "title": "Colorado Springs"
+            },
+            {
+                "_id": "5c98b99f133d0432d9ec4ce2",
+                "title": "Denver West - Golden"
+            },
+            {
+                "_id": "5c98b9b3133d0432d9ec4cea",
+                "title": "Highlands Ranch"
+            },
+            {
+                "_id": "5c98b9c3133d0432d9ec4cf2",
+                "title": "Lowry - Denver"
+            },
+            {
+                "_id": "5c98b9dc133d0432d9ec4cfa",
+                "title": "Parker"
+            },
+            {
+                "_id": "5c98b9f5133d0432d9ec4d02",
+                "title": "Southwest Littleton"
+            },
+            {
+                "_id": "5c98ba0e133d0432d9ec4d0a",
+                "title": "Westminster"
+            },
+            {
+                "_id": "5cf0e16d16229f3f899f4dfd",
+                "title": "Pueblo"
+            },
+            {
+                "_id": "5c98ba53133d0432d9ec4d12",
+                "title": "Rapid City"
+            },
+            {
+                "_id": "5c98b0c0133d0432d9ec4b62",
+                "title": "Bartlett - Memphis"
+            },
+            {
+                "_id": "5c98b0e3133d0432d9ec4b6a",
+                "title": "Desoto - Southaven"
+            },
+            {
+                "_id": "5c98b105133d0432d9ec4b72",
+                "title": "East - Memphis"
+            },
+            {
+                "_id": "5c98b124133d0432d9ec4b7a",
+                "title": "Germantown"
+            },
+            {
+                "_id": "5c98b139133d0432d9ec4b82",
+                "title": "Paul W Barrett-Memphis"
+            },
+            {
+                "_id": "5c98b153133d0432d9ec4b8a",
+                "title": "Tupelo"
+            },
+            {
+                "_id": "5c98b17b133d0432d9ec4b92",
+                "title": "Baton Rouge"
+            },
+            {
+                "_id": "5c98b196133d0432d9ec4b9a",
+                "title": "Hattiesburg"
+            },
+            {
+                "_id": "5c98b1aa133d0432d9ec4ba2",
+                "title": "Lafayette"
+            },
+            {
+                "_id": "5c98b1c4133d0432d9ec4baa",
+                "title": "Morgan City"
+            }
+        ]
+    ],
+    "isConCurrentUserActive": false,
+    "isConCurrentUserAdmin": false,
+    "verificationCode": "2580",
+    "allowAfterfailedLoginAttempts": false,
+    "username": "tryusr1",
+    "firstname": "try",
+    "lastname": "try1",
+    "email": "try@yopmail.com",
+    "createById": "5c76a4759fdcda4e9f17122d",
+    "displayroles": "Admin",
+    "assignmentEmailNotification": true
+}

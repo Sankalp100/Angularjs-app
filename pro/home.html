@@ -1,0 +1,20 @@
+<div id="page-content">
+  <h2>Page without Sidebar</h2>
+  <div class="alert alert-info" style="text-align:center;"><h5>This demo is best viewed in full-screen mode</h5></div>
+  <div class="jumbotron">
+    <div class="lead">A bit about this demo</div>
+    <small>This demo aims to show how to use angularjs ui-router in combination
+  with a ui requirement wherein some pages need a sidebar navigation
+  and others don't. You'll note that this page has
+  no side navbar and uses nested content, whereas the Products 
+  page includes a collapsible sidebar navigation with nested 
+  content areas for each sub-nav items.</small>
+  </div>
+
+  <a ui-sref=".list" class="btn btn-primary">Show Nested List</a>
+  <a ui-sref=".paragraph" class="btn btn-primary">Show Nested Paragraph</a>
+  <hr>
+  <div ui-view>
+    Click a button above to access nested content. This paragraph is default content in the nested area, which is replaced by the selected child contact when a button is clicked.
+  </div>
+</div>

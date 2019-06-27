@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script data-require="angularjs@1.6.2" data-semver="1.6.2"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="script.js"></script>
+</head>
+
+<body class="container" ng-app="myApp" ng-controller="studentController" ng-cloak>
+
+    <h1>Customer Package</h1>
+
+
+    <!--Users List-->
+    <br />
+    <h4>Users List</h4>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>User name</td>
+                <td>firstName</td>
+                <td>LastName</td>
+                <td>User's email addressr</td>
+                <td>Security Level</td>
+                <td>Access to Region</td>
+                <td>Production Site</td>
+                <td>Collection Site</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users">
+                <td>{{user.username}}</td>
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.security_level}}</td>
+                <td>{{user.access_to_region}}</td>
+                <td>{{user.production_site}}</td>
+                <td>{{user.collection_site}}</td>
+                <td><button class="btn btn-default btn-sm" ng-click="createUser(user)">Post</button></td>
+                <!-- <td>
+                    <button class="btn btn-default btn-sm" ng-click="editUser(user)">Edit</button>
+                    <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+                </td> -->
+            </tr>
+
+        </tbody>
+    </table>
+
+    <!-- <div data-ng-repeat="user in users">
+        <input type="text" ng-model="use.name" ng-value="user.user_name">
+    </div>
+    <div ng-repeat="i in phones">
+        <p>{{i.roles}}</p>
+    </div> -->
+    <form>
+            <!-- <h4></h4>  -->
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label class="control-label ">passwordGenerationMethod</label>
+                <input type="text" class="form-control" ng-model="new.passwordGenerationMethod" placeholder="" />
+              </div>
+              
+              
+              <!-- <div class="form-group col-md-2">
+                <label class="control-label ">Cook Measurments</label>
+                <input type="text" class="form-control" ng-model="user.cooking_measurements" placeholder="" />
+              </div>
+              <div class="form-group col-md-2">
+                <label class="control-label ">Serving Measurments</label>
+                <input type="text" class="form-control" ng-model="user.serving_measurements" placeholder="" />
+              </div> -->
+            </div>
+            
+      
+      
+            <div class="col-md-offset-2 col-md-10">
+              <!-- <input type="submit" value="submit" class="btn btn-sm" ng-show="submit" />
+              <input type="submit" value="Done" class="btn btn-sm" ng-show="submit" /> -->
+              <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm" ng-show="update" />
+              <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm" ng-show="cancel" />
+            </div>
+          </form>
+
+    <button class="btn btn-default btn-sm" ng-click="createUser()">Post</button>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>passwordGenerationMethod</td>
+                <td>isActive</td>
+                <td>roles</td>
+                <td>applicableSites</td>
+                <td>isConCurrentUserActive</td>
+                <td>Access to Region</td>
+                <td>Production Site</td>
+                <td>Collection Site</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{new.passwordGenerationMethod}}</td>
+                <td>{{new.isActive}}</td>
+                <td>{{new.roles}}</td>
+                <td>{{new.applicableSites}}</td>
+                <td>{{new.isConCurrentUserActive}}</td>
+                <td>{{new.isConCurrentUserAdmin}}</td>
+                <td>{{new.verificationCode}}</td>
+                <td>{{new.allowAfterfailedLoginAttempts}}</td>
+                <!-- <td><button class="btn btn-default btn-sm" ng-click="createUser(user)">Post</button></td> -->
+                <td>
+                    <button class="btn btn-default btn-sm" ng-click="editUser(new)">Edit</button>
+                    <button class="btn btn-default btn-sm" ng-click="deleteUser(new)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

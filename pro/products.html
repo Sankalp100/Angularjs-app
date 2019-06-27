@@ -1,0 +1,27 @@
+<div id="page-wrapper">
+  <div id="page-viewport">
+    <div id="sidebar">
+      <div id="sidebar-header">
+        <a href="" class="toggle-sidebar"><h3>Sidebar</h3></a>
+        <span class="pull-right">
+          <a href="" class="toggle-sidebar btn btn-default">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span> 
+      </div>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a ui-sref="products.intro">Intro<span class="pull-right"><i class="fa fa-info"></i></span></a>
+        </li>
+        <li><a ui-sref="products.list">Product List<span class="pull-right"><i class="fa fa-list"></i></span></a>
+        </li>
+        <li><a ui-sref="products.another">Another Content Page<span class="pull-right"><i class="fa fa-code"></i></span></a>
+        </li>
+
+      </ul>
+    </div>
+    <div id="sidebar-page-content">
+      <div ui-view></div>
+    </div>
+  </div>
+</div>
+<script src="sidebar.js"></script>
