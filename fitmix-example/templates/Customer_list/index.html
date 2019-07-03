@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script> -->
+    <script data-require="angularjs@1.6.2" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="script.js"></script>
+  </head>
+
+  <body class="container" ng-app="myApp" ng-controller="studentController" ng-cloak>
+    
+    <h1>Customer List</h1>
+    
+    <!--Form-->
+    <form ng-submit="createUser()">
+      <!-- <h4>Add Customer</h4> -->
+      <div class="form-group">
+        <label class="control-label col-md-2">Individual</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.isIndividual" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Select Group</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.group_name" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Select package</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.package_code" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Name</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.customer_name" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Email</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.customer_email" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Mobile Number</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.customer_mobileno" placeholder="" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-2">Gender</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.gender" placeholder="" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-2">Created On</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.created_on" placeholder="" />
+        </div>
+      </div>
+
+      <div class="col-md-offset-2 col-md-10">
+      <input type="submit" value="submit" class="btn  btn-sm" ng-show="submit" />    
+      <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm" ng-show="update" />    
+      <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm" ng-show="cancel"/>    
+      </div>
+    </form>
+    <!--End Form-->
+    
+    <!--Users List-->
+    <br />
+    <h4>Customer Import </h4>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <td>Batch No</td>
+          <td>Package</td>
+          <td>Group Name</td>
+          <td>Created On</td>
+          <td>Total Count</td>
+         
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users">
+          <td></td>
+          <td>{{user.package_code}}</td>
+          <td>{{user.group_name}}</td>
+          <td>{{user.created_on}}</td>
+          <td></td>
+          <td>
+
+            <button class="btn btn-default btn-sm" ng-click="editUser(user)">Edit</button>
+            <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+ 
+    </table>
+    
+  </body>
+
+</html>

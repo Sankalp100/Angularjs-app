@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script> -->
+  <script data-require="angularjs@1.6.2" data-semver="1.6.2"
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <script src="dietitian.js"></script>
+</head>
+
+<body class="container" ng-app="myApp" ng-controller="studentController" ng-cloak>
+
+  <h1>Dietitian</h1>
+
+  <!--Form-->
+  <form ng-submit="createUser()">
+    <h4>Add Dietitian</h4>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="control-label ">Dietitian Name</label>
+        <input type="text" class="form-control" ng-model="user.dietitian_name" placeholder="" />
+      </div>
+
+      <div class="form-group col-md-6">
+        <label class="control-label ">qualification</label>
+        <input type="text" class="form-control" ng-model="user.qualification" placeholder="" />
+
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="control-label ">Email</label>
+        <input type="text" class="form-control" ng-model="user.dietitian_email" placeholder="" />
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Contact Name</label>
+        <input type="text" class="form-control" ng-model="user.dietitian_contactno" placeholder="" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="control-label ">Description</label>
+        <input type="text" class="form-control" ng-model="user.description" placeholder="" />
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label ">Address 1</label>
+        <input type="text" class="form-control" ng-model="user.address1" placeholder="" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label class="control-label">Address2</label>
+        <input type="text" class="form-control" ng-model="user.address2" placeholder="" />
+      </div>
+      <div class="form-group col-md-4">
+        <label class="control-label">State</label>
+        <input type="text" class="form-control" ng-model="user.state" placeholder="" />
+      </div>
+      <div class="form-group col-md-4">
+        <label class="control-label">City</label>
+        <input type="text" class="form-control" ng-model="user.city" placeholder="" />
+      </div>
+    </div>
+    <div class="col-md-offset-2 col-md-10">
+      <input type="submit" value="submit" class="btn  btn-sm" ng-show="submit" />
+      <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm" ng-show="update" />
+      <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm" ng-show="cancel" />
+    </div>
+  </form>
+  <!--End Form-->
+
+  <!--Users List-->
+  <br />
+  <h4>Dietitians List</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Qualification</td>
+        <td>Email</td>
+        <td>Contactno</td>
+        <td>Action Commands</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user.dietitian_name}}</td>
+        <td>{{user.qualification}}</td>
+        <td>{{user.dietitian_email}}</td>
+        <td>{{user.dietitian_contactno}}</td>
+        <td>
+          <button class="btn btn-default btn-sm" ng-click="editUser(user)">Edit</button>
+          <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</body>
+
+</html>

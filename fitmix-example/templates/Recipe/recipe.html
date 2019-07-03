@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script data-require="angularjs@1.6.2" data-semver="1.6.2"
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <script src="recipe.js"></script>
+</head>
+
+<body class="container" ng-app="myApp" ng-controller="recipeController" ng-cloak>
+
+  <h1>Recipe</h1>
+
+  <!--Form-->
+  <form ng-submit="createUser()">
+    <h4>Create Recipe</h4>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="control-label">Recipe Name</label>
+        <input type="text" class="form-control" ng-model="user.recipe_name" placeholder="" />
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Parent Recipe</label>
+        <input type="text" class="form-control" ng-model="user.parent_recipe" placeholder="" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="control-label">Variants</label>
+        <input type="text" class="form-control" ng-model="user.variants" placeholder="" />
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Refernece_url</label>
+        <input type="text" class="form-control" ng-model="user.reference_url" placeholder="" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="control-label">Possible Measurments</label>
+        <input type="text" class="form-control" ng-model="user.possible_measurements" placeholder="" />
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Type of Recipe</label>
+        <input type="text" class="form-control" ng-model="user.recipetype_name.recipetype_name" placeholder="" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="control-label">Upload Image</label>
+        <input type="text" class="form-control" ng-model="user.upload_image" placeholder="" />
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Description</label>
+        <input type="text" class="form-control" ng-model="user.description" placeholder="" />
+      </div>
+    </div>
+    <div class="col-md-offset-2 col-md-10">
+      <input type="submit" value="submit" class="btn  btn-sm" ng-show="submit" />
+      <a ng-click="createUser" href="#!RecipeIngreInfo"><input type="submit" value="save and continue"
+          class="btn  btn-sm" ng-show="submit" /></a>
+      <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm" ng-show="update" />
+      <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm" ng-show="cancel" />
+    </div>
+  </form>
+  <!--End Form-->
+
+  <!--Users List-->
+  <br />
+  <h4>Users List</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Code</td>
+        <td>Parent</td>
+        <td>Name</td>
+        <td>Variants</td>
+        <td>Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user.recipe_id}}</td>
+        <td>{{user.parent_recipe}}</td>
+        <td>{{user.recipe_name}}</td>
+        <td>{{user.variants}}</td>
+        <td>
+          <button class="btn btn-default btn-sm" ng-click="editUser(user)">Edit</button>
+          <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</body>
+
+</html>

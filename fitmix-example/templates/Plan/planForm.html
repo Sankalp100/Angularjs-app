@@ -1,0 +1,57 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <h1>
+            Plan
+            <small>Create</small>
+        </h1>
+        <!-- <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active">Plan</li>
+      </ol> -->
+    </section>
+
+    <!--Form-->
+    <section class="content">
+        <form ng-submit="createUser()">
+            <!-- <h4>Create Plan</h4> -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="control-label ">Plan Name</label>
+                    <input type="text" class="form-control" ng-model="user.plan_name" placeholder="" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label ">Plan Code</label>
+                    <input type="text" class="form-control" ng-model="user.plan_code" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group  ">
+                <label class="control-label ">Description</label>
+                <textarea type="text" class="form-control" ng-model="user.description" placeholder=""
+                    rows="5"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="checkbox" name="IsCustomPlan" ng-model="user.isCustomPlan"> IsCustomPlan
+                </div>
+                &nbsp&nbsp&nbsp&nbsp
+                <div class="form-group  ">
+                    <input type="checkbox" name="IsCustomPlan" ng-model="user.isDefault"> IsDefault
+                </div>
+            </div>
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" ng-show="submit" class="btn btn-default"> Save</button>
+                <!-- <input type="submit" value="submit" class="btn  btn-sm" ng-show="submit" /> -->
+                <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm"
+                    ng-show="update" />
+                <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm"
+                    ng-show="cancel" />
+            </div>
+        </form>
+    </section>
+    <!--End Form-->
+
+    <!--Users List-->
+
+
+</div>

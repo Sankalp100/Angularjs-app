@@ -1,0 +1,214 @@
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            Ingredient
+            <small>Preview</small>
+        </h1>
+    </section>
+    <section class="content">
+        <div class="box">
+            <form ng-submit="createUser()">
+                <h4>Add Ingredients</h4>
+                <div class="form-row">
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Food Code</label>
+                    <input type="text" class="form-control" ng-model="user.food_code" placeholder="" />
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Food Group</label>
+                    <input type="text" class="form-control" ng-model="user.food_group" placeholder="" />
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Ingrediant Type</label>
+                    <input type="text" class="form-control" ng-model="user.ingrediant_type" placeholder="" />
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Food Name</label>
+                    <input type="text" class="form-control" ng-model="user.food_name" placeholder="" />
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Guju Name</label>
+                    <input type="text" class="form-control" ng-model="user.guju_name" placeholder="" />
+            
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Quantity</label>
+                    <input type="text" class="form-control" ng-model="user.quantity" placeholder="" />
+            
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">One_Exchange</label>
+                    <input type="text" class="form-control" ng-model="user.one_exchange" placeholder="" />
+            
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Energy kj</label>
+                    <input type="text" class="form-control" ng-model="user.energy_kj" placeholder="" />
+            
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Energy kcal</label>
+                    <input type="text" class="form-control" ng-model="user.energy_kcal" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">GI value</label>
+                    <input type="text" class="form-control" ng-model="user.gi_value" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">GL value</label>
+                    <input type="text" class="form-control" ng-model="user.gl_value" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Carbohydrate</label>
+                    <input type="text" class="form-control" ng-model="user.carbohydrate" placeholder="" />
+            
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Protein</label>
+                    <input type="text" class="form-control" ng-model="user.protein" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Total Fibre</label>
+                    <input type="text" class="form-control" ng-model="user.total_fibre" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Solublf</label>
+                    <input type="text" class="form-control" ng-model="user.solublf" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">In solublf</label>
+                    <input type="text" class="form-control" ng-model="user.in_solublf" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Invisible Totalfat</label>
+                    <input type="text" class="form-control" ng-model="user.invisible_totalfat" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Visiblefat</label>
+                    <input type="text" class="form-control" ng-model="user.visiblefat" placeholder="" />
+            
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Thiamine</label>
+                    <input type="text" class="form-control" ng-model="user.thiamine" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Riboflavin</label>
+                    <input type="text" class="form-control" ng-model="user.riboflavin" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Niacin</label>
+                    <input type="text" class="form-control" ng-model="user.niacin" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Biotin</label>
+                    <input type="text" class="form-control" ng-model="user.biotin" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Folates</label>
+                    <input type="text" class="form-control" ng-model="user.folates" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Ascorbic Acid</label>
+                    <input type="text" class="form-control" ng-model="user.ascorbic_Acid" placeholder="" />
+            
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">vitamin d2d3</label>
+                    <input type="text" class="form-control" ng-model="user.vitamin_d2d3" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Calcium</label>
+                    <input type="text" class="form-control" ng-model="user.calcium" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Phosphorous</label>
+                    <input type="text" class="form-control" ng-model="user.phosphorous" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Iron</label>
+                    <input type="text" class="form-control" ng-model="user.iron" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Sodium</label>
+                    <input type="text" class="form-control" ng-model="user.sodium" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-2">
+                    <label class="control-label ">Potassium</label>
+                    <input type="text" class="form-control" ng-model="user.potassium" placeholder="" />
+            
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label class="control-label ">Zinc</label>
+                    <input type="text" class="form-control" ng-model="user.zinc" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-3">
+                    <label class="control-label ">Magnesium</label>
+                    <input type="text" class="form-control" ng-model="user.magnesium" placeholder="" />
+            
+                  </div>
+            
+                  <div class="form-group col-md-3">
+                    <label class="control-label ">Sfa</label>
+                    <input type="text" class="form-control" ng-model="user.sfa" placeholder="" />
+            
+                  </div>
+                </div>
+            
+                <div class="col-md-offset-2 col-md-10">
+                  <input type="submit" value="submit" class="btn  btn-sm" ng-show="submit" />
+                  <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm" ng-show="update" />
+                  <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm" ng-show="cancel" />
+                </div>
+              </form>
+        </div>
+    </section>
+</div>

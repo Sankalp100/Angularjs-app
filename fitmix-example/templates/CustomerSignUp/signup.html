@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script data-require="angularjs@1.6.2" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <link rel="stylesheet" href="style.css" /> -->
+    <script src="signup.js"></script>
+  </head>
+
+  <body class="container" ng-app="myApp" ng-controller="studentController" ng-cloak>
+    
+    <h1>User</h1>
+    
+    <!--Form-->
+    <form ng-submit="createUser()">
+      <h4>Create User</h4>
+      <div class="form-group">
+        <label class="control-label col-md-2">Customer Name</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.customer_name" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Email</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.customer_email" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Contact_no</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.customer_contactno" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">City</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.city" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">DOB</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.birth_date" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Gender</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.gender" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Height</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.height" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Weight</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.weight" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Activity</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.activity" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2">Dietery Habits</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="user.dietary_habits" placeholder="" />
+        </div>
+      </div>
+
+      <div class="col-md-offset-2 col-md-10">
+      <input type="submit" value="submit" class="btn  btn-sm" ng-show="submit" />    
+      <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm" ng-show="update" />    
+      <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm" ng-show="cancel"/>    
+      </div>
+    </form>
+    <!--End Form-->
+    
+    <!--Users List-->
+    <br />
+    <h4>Users List</h4>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          
+          <td>Name</td>
+          <td>Email</td>
+          <td>Contact No</td>
+          <td>City</td>
+          <td>DOB</td>
+          <td>Gender</td>
+          <td>Height</td>
+          <td>Weight</td>
+          <td>Activity</td>
+          <td>Dietery Habits</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users">
+          <td>{{user.customer_name}}</td>
+          <td>{{user.customer_email}}</td>
+          <td>{{user.customer_contactno}}</td>
+          <td>{{user.city}}</td>
+          <td>{{user.birth_date}}</td>
+          <td>{{user.gender}}</td>
+          <td>{{user.height}}</td>
+          <td>{{user.weight}}</td>
+          <td>{{user.activity}}</td>
+          <td>{{user.dietary_habits	}}</td>  
+          <td>
+            <button class="btn btn-default btn-sm" ng-click="editUser(user)">Edit</button>
+            <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+ 
+    </table>
+    
+  </body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script> -->
+  <script data-require="angularjs@1.6.2" data-semver="1.6.2"
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+
+</head>
+
+<body class="container" ng-app="myApp" ng-controller="studentController" ng-cloak>
+
+  <h1>UNITS OF MEASUREMENT</h1>
+
+  <!--Form-->
+  <form ng-submit="createUser()">
+    <!--<h4>Create Plan</h4>-->
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label class="control-label ">UOM Name</label>
+        <input type="text" class="form-control" ng-model="user.uom_name" placeholder="" />
+      </div>
+      <div class="form-group col-md-4">
+        <label class="control-label "> Value</label>
+        <input type="text" class="form-control" ng-model="user.uom_value" placeholder="" />
+      </div>
+      <div class="form-group col-md-4">
+        <label class="control-label "> ParentName</label>
+        <input type="text" class="form-control" ng-model="user.parent_name" placeholder="" />
+      </div>
+    </div>
+    <div class="col-md-offset-2 col-md-10">
+      <input type="submit" value="submit" class="btn  btn-sm" ng-show="submit" />
+      <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm" ng-show="update" />
+      <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm" ng-show="cancel" />
+    </div>
+  </form>
+  <!--End Form-->
+
+  <!--Users List-->
+  <br />
+  <h4>Added List</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Value</td>
+        <td>Parent Name</td>
+        <td>Action Commands</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user.uom_name}}</td>
+        <td>{{user.uom_value}}</td>
+        <td>{{user.parent_name}}</td>
+        <td>
+          <button class="btn btn-default btn-sm" ng-click="editUser(user)">Edit</button>
+          <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+  <script src="uom.js"></script>
+</body>
+
+</html>

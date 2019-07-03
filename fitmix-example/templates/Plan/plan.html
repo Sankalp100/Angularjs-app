@@ -1,0 +1,53 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <h1>
+      Plan
+      <small>Create</small>
+    </h1>
+
+  </section>
+
+  <!--Form-->
+
+  <!--End Form-->
+
+  <!--Users List-->
+  <div class="form-row">
+    <div class="form-group">
+      <a type="button" class="btn btn-default" href="#!planForm">Add Plan</a>
+    </div>
+    &nbsp&nbsp&nbsp&nbsp&nbsp
+    <div class="form-group">
+      <input type="text" placeholder="Search..." ng-model="searchText" /> <br /><br />
+    </div>
+  </div>
+  <br />
+  <h4>Plans List</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Plan Code</td>
+        <td>Description</td>
+        <td>isActive</td>
+        <td>Action Commands</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users | filter:searchText">
+        <td>{{user.plan_name}}</td>
+        <td>{{user.plan_code}}</td>
+        <td>{{user.description}}</td>
+        <td>{{user.isActive}}</td>
+        <td>
+          <a class="btn btn-primary btn-xs" href="#!/planForm/{{user.id}}">
+            <span class="glyphicon glyphicon-pencil"></span></a>
+          <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>

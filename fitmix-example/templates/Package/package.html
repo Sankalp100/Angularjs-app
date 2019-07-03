@@ -1,0 +1,41 @@
+<div class="content-wrapper">
+  <section class="content-header">
+    <h1>
+      Package
+      <small>List</small>
+    </h1>
+  </section>
+  <section class="contect">
+    <div class="box">
+      <a type="button" href="#!add-package">Add Package</a>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Code</td>
+            <td>Duration</td>
+            <td>Plan Name</td>
+            <td>Dietitian Name</td>
+            <td>isGroupPackage</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="user in users">
+            <td>{{user.package_name}}</td>
+            <td>{{user.package_code}}</td>
+            <td>{{user.duration}}</td>
+            <td>{{user.plan_name.plan_name}}</td>
+            <td>{{user.dietitian_name.dietitian_name}}</td>
+            <td>{{user.isGroupPackage	}}</td>
+            <td>
+              <a href="#!add-package" class="btn btn-default btn-sm" ng-click="editUser(user)" >Edit</a>
+              <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>  
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </section>
+</div>

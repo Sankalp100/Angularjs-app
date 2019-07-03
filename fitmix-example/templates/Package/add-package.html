@@ -1,0 +1,51 @@
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            Package
+            <small>create</small>
+        </h1>
+    </section>
+
+    <section class="content">
+        <form ng-submit="createUser()">
+            <h4>Create Package</h4>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="control-label">Package Name</label>
+                    <input type="text" class="form-control" ng-model="user.package_name" placeholder="" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label">Plan Name</label>
+                    <input type="text" class="form-control" ng-model="user.plan_name" placeholder="" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="control-label">Dietitian Name</label>
+                    <input type="text" class="form-control" ng-model="user.dietitian_name" placeholder="" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label">Duration</label>
+                    <input type="text" class="form-control" ng-model="user.duration" placeholder="" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="control-label">isGroupPackage</label>
+                    <input type="text" class="form-control" ng-model="user.isGroupPackage	" placeholder="" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label">Description</label>
+                    <input type="text" class="form-control" ng-model="user.description" placeholder="" />
+                </div>
+            </div>
+
+            <input type="submit" value="submit" class="btn  btn-sm" ng-show="submit" />
+            <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm"
+                ng-show="update" />
+            <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm"
+                ng-show="cancel" />
+
+        </form>
+    </section>
+</div>

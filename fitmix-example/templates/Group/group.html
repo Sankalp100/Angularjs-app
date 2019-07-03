@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script data-require="angularjs@1.6.2" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <link rel="stylesheet" href="style.css" /> -->
+  <script src="group.js"></script>
+</head>
+
+<body class="container" ng-app="myApp" ng-controller="studentController" ng-cloak>
+
+  <h1>Group</h1>
+
+  <!--Form-->
+  <form ng-submit="createUser()">
+    <h4>Add Group</h4>
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label class="control-label">Group Name</label>
+        <input type="text" class="form-control" ng-model="user.group_name" placeholder="" />
+      </div>
+      <div class="form-group col-md-2">
+        <label class="control-label">Group Code</label>
+        <input type="text" class="form-control" ng-model="user.group_code" placeholder="" />
+      </div>
+      <div class="form-group col-md-2">
+        <label class="control-label">Dietitian Name</label>
+        <input type="text" class="form-control" ng-model="user.dietitian_name.dietitian_name" placeholder="" />
+      </div>
+      <div class="form-check check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" ng-model="user.isActive">Is Default
+        </label>
+      </div>
+    </div>
+    <div class="col-md-offset-2 col-md-10">
+      <input type="submit" value="submit" class="btn  btn-sm" ng-show="submit" />
+      <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm" ng-show="update" />
+      <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm" ng-show="cancel" />
+    </div>
+  </form>
+  <!--End Form-->
+
+  <!--Users List-->
+  <br />
+  <h4>Groups List</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>GroupName</td>
+        <td>Group Code</td>
+        <td>Dietitian Name</td>
+        <td>isActive</td>
+        <td>Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user.group_name}}</td>
+        <td>{{user.group_code}}</td>
+        <td>{{user.dietitian_name.dietitian_name}}</td>
+        <td>{{user.isActive}}</td>
+        <td>
+          <button class="btn btn-default btn-sm" ng-click="editUser(user)">Edit</button>
+          <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</body>
+
+</html>

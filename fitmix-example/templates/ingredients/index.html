@@ -1,0 +1,41 @@
+<div class="content-wrapper">
+  <section class="content-header">
+    <h1>
+      Ingredient
+      <small>List</small>
+    </h1>
+  </section>
+  <br>
+
+  <section class="content">
+    <a type="button" href="#!add-ingredients">Add Ingrediant</a>
+    <!--Users List-->
+
+    <h4>Users List</h4>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <td>Type</td>
+          <td>Food Name</td>
+          <td>Guju Name</td>
+          <td>Quantity</td>
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users">
+
+          <td>{{user.food_group}}-{{user.food_code}}</td>
+          <td>{{user.food_name}}</td>
+          <td>{{user.guju_name}}</td>
+          <td>{{user.quantity}}</td>
+          <td>
+            <a href="add-ingredients.html" class="btn btn-default btn-sm" ng-click="editUser(user)">Edit</a>
+            <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </section>
+</div>

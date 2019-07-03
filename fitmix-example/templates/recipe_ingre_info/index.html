@@ -1,0 +1,163 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <h1>
+      Ingrediant Info
+      <!-- <small>Create</small> -->
+    </h1>
+    <!-- <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active">Plan</li>
+      </ol> -->
+  </section>
+
+  <!--Form-->
+  <section class="content">
+    <form ng-submit="createUser()">
+      <!-- <h4></h4>  -->
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label class="control-label ">Default Serving</label>
+          <input type="text" class="form-control" ng-model="user.default_serving" placeholder="" />
+        </div>
+        <div class="form-group col-md-2">
+          <label class="control-label ">Select UOM</label>
+          <input type="text" class="form-control" ng-model="user.uom_name" placeholder="" />
+        </div>
+        <div class="form-group col-md-2">
+          <label class="control-label ">UOM Value</label>
+          <input type="text" class="form-control" ng-model="user.uom_value" placeholder="" />
+        </div>
+        <div class="form-group col-md-2">
+          <label class="control-label ">Select Unit</label>
+          <select id="selectpackage" class="form-control" ng-model="user.unit_name">
+            <option>INCH</option>
+            <option>GM</option>
+            <option>ML</option>
+            <option>NO</option>
+            <option>KG</option>
+            <option>CM</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label class="control-label ">Cook Measurments</label>
+          <input type="text" class="form-control" ng-model="user.cooking_measurements" placeholder="" />
+        </div>
+        <div class="form-group col-md-2">
+          <label class="control-label ">Serving Measurments</label>
+          <input type="text" class="form-control" ng-model="user.serving_measurements" placeholder="" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label class="control-label ">Ingrediants</label>
+          <select id="selectpackage" class="form-control selectpicker" data-live-search="true" ng-model="user.food_code">
+            <option selected></option>
+            <!-- <option><input type="text" placeholder="Search..." ng-model="searchText"/></option> -->
+            <option ng-repeat="user in food">
+              {{ user.food_code }} - {{user.food_name}}
+            </option>
+          </select>
+        </div>
+        
+        <div class="form-group col-md-2">
+          <label class="control-label ">Ingrediants Qty</label>
+          <input type="text" class="form-control" ng-model="user.ingredient_qty" placeholder="" />
+        </div>
+      </div>
+
+
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="submit" class="btn btn-sm" ng-show="submit" />
+        <input type="submit" value="Done" class="btn btn-sm" ng-show="submit" />
+        <input type="button" value="update" ng-click="updateUser()" class="btn btn-default btn-sm" ng-show="update" />
+        <input type="button" value="cancel" ng-click="cancelUpdate()" class="btn btn-default btn-sm" ng-show="cancel" />
+      </div>
+    </form>
+  </section>
+  <!--End Form-->
+
+  <!--Users List-->
+  <br />
+  <h4>Ingredient Details</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <!-- <td>No</td> -->
+        <td>Ingredients</td>
+        <td>Unit</td>
+        <td>Ingredient Qty</td>
+        <td>Cook Measurements</td>
+        <td>Serving Measurements</td>
+        <td>Qty</td>
+        <td>Exchanges Per Amount</td>
+        <td>Energy KJ</td>
+        <td>Energy KCAL</td>
+        <td>Carbohydrate</td>
+        <td>Protein</td>
+        <td>FibreTotal</td>
+        <td>Solublf</td>
+        <td>InSolublf</td>
+        <td>In-Visible Fat</td>
+        <td>Visible Fat</td>
+        <td>Thiamine</td>
+        <td>Riboflavin</td>
+        <td>Niacin</td>
+        <td>Biotin</td>
+        <td>Folates</td>
+        <td>AscorbicACID</td>
+        <td>VitaminD2D3</td>
+        <td>Calcuim</td>
+        <td>Phosphorus</td>
+        <td>Iron</td>
+        <td>Sodium</td>
+        <td>Potassium</td>
+        <td>Zinc</td>
+        <td>Magnesium</td>
+        <td>SFA</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <!-- <td>{{user.reci_ingreinfo_id}}</td> -->
+        <td>{{user.food_code}}-{{}}</td>
+        <td>{{user.uom_name}}</td>
+        <td>{{user.ingredient_qty}}</td>
+        <td>{{user.cooking_measurements}}</td>
+        <td>{{user.serving_measurements}}</td>
+        <td>{{user.qty}}</td>
+        <td>{{user.exchanges_per_amount}}</td>
+        <td>{{user.energy_kj}}</td>
+        <td>{{user.energy_kcal}}</td>
+        <td>{{user.carbohydrate}}</td>
+        <td>{{user.protein}}</td>
+        <td>{{user.total_fibre}}</td>
+        <td>{{user.solublf}}</td>
+        <td>{{user.in_solublf}}</td>
+        <td>{{user.invisible_totalfat}}</td>
+        <td>{{user.visiblefat}}</td>
+        <td>{{user.thiamine}}</td>
+        <td>{{user.riboflavin}}</td>
+        <td>{{user.niacin}}</td>
+        <td>{{user.biotin}}</td>
+        <td>{{user.folates}}</td>
+        <td>{{user.ascorbic_Acid}}</td>
+        <td>{{user.vitamin_d2d3}}</td>
+        <td>{{user.calcium}}</td>
+        <td>{{user.phosphorous}}</td>
+        <td>{{user.iron}}</td>
+        <td>{{user.sodium}}</td>
+        <td>{{user.potassium}}</td>
+        <td>{{user.zinc}}</td>
+        <td>{{user.magnesium}}</td>
+        <td>{{user.sfa}}</td>
+        <td>
+          <button class="btn btn-default btn-sm" ng-click="editUser(user)">Edit</button>
+          <button class="btn btn-default btn-sm" ng-click="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
