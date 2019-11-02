@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "mocha": "^6.1.4",
-    "mongoose": "^5.5.12"
+    "mongoose": "^5.7.5"
   }
 }
